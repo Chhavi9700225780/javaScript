@@ -1,0 +1,2 @@
+# javaScript
+notes of javascript
