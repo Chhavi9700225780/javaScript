@@ -1,0 +1,81 @@
+function sayMyName(){
+    console.log("H");
+    console.log("I");
+    console.log("T");
+    console.log("E");
+    console.log("S");
+    console.log("H");
+}
+
+// sayMyName--Reference,()-->Executetion of function
+
+// function addTwoNumbers(number1, number2){
+
+//     console.log(number1 + number2); 
+// }
+//addTwoNumbers() -->Output (NaN)
+//addTwoNumbers(3 , a) --> Output (3a)
+                      //{Parameters}
+function addTwoNumbers(number1, number2){
+   //step 1  //console.log(number1+number2)
+    // let result = number1 + number2
+    // return result
+    //console.log("Unrechable Code")
+    return number1 + number2
+}
+
+const result = addTwoNumbers(3, 5)
+
+// console.log("Result: ", result); //Output is( undefined) if only step 1 is written in function
+//because
+
+
+function loginUserMessage(username = "sam"){
+    if(!username){
+        console.log("PLease enter a username");
+        return
+    }
+    //Unreachable Code
+    return `${username} just logged in`
+}
+//console.log(loginUserMessage(" ")) --> Output just logged in
+//console.log(loginUserMessage( )) --> Output is Undefined
+// console.log(loginUserMessage("hitesh"))
+// console.log(loginUserMessage("hitesh"))
+
+                         //SHOPPING CARDS EXAMPAL
+//WHEN WE Want to pass more than one argument values then we use{rest operator(...num1)}//SPREADING OPERATOR
+//now look at below and think which value will be assign to num1.
+//val1 = 200
+//val2 = 400
+//num1 = all the rest values (500, 2000)
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+// console.log(calculateCartPrice(200, 400, 500, 2000))
+
+const user = {
+    username: "hitesh",  //object
+    prices: 199
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`); //output .. price is undefined
+    //when price is converted to prices so we have to check the type of argument and is it have prices or not
+}
+
+// handleObject(user) --> output 
+handleObject({
+    username: "sam",
+    price: 399
+})
+
+const myNewArray = [200, 400, 100, 600]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 1000]));//direct no change in variable
