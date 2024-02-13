@@ -50,7 +50,7 @@ users[1].email
 
 // console.log(Object.keys(tinderUser));
 // console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser)); // every and each  key and values converts in array
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 

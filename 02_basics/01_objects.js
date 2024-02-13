@@ -4,6 +4,7 @@
 // object literals
 
 const mySym = Symbol("key1")
+const mySym2 = Symbol("key1") //both are different
 
 
 const JsUser = {
