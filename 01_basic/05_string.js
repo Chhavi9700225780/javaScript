@@ -19,7 +19,7 @@ console.log(gameName.indexOf('t'));
 const newString = gameName.substring(0, 4)
 console.log(newString);
 
-const anotherString = gameName.slice(-8, 4)
+const anotherString = gameName.slice(-8, 4) //reverse ite
 console.log(anotherString);
 
 const newStringOne = "   hitesh    "
@@ -30,6 +30,7 @@ const url = "https://hitesh.com/hitesh%20choudhary"
 
 console.log(url.replace('%20', '-'))
 
-console.log(url.includes('sundar'))
+console.log(url.includes('sundar')) //false
 
-console.log(gameName.split('-'));
+console.log(gameName.split('-')); //split(seperator , limit) // returs array 
+//[hitesh hc chaia]
