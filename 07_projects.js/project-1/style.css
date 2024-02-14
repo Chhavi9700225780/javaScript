@@ -3,6 +3,30 @@
     box-sizing:border-box;
     margin: 0px;
 }
+body {
+    
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: black;
+    background-color: white;
+    text-align :center;
+}
+.container{
+
+    display : flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display : flex;
+    flex-wrap :wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 .button{
     width:100px;
@@ -10,12 +34,8 @@
     display:inline-block;
     border:solid black 2px;
 }
-body {
-    margin: 0;
-    font-family: system-ui, sans-serif;
-    color: black;
-    background-color: white;
-}
+
+
 #grey{
     background-color: grey;
 }
