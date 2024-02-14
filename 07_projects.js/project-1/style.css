@@ -1,0 +1,31 @@
+
+*{
+    box-sizing:border-box;
+    margin: 0px;
+}
+
+.button{
+    width:100px;
+    height:100px;
+    display:inline-block;
+    border:solid black 2px;
+}
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: black;
+    background-color: white;
+}
+#grey{
+    background-color: grey;
+}
+#blue{
+    background-color: blue;
+}
+#white{
+    background-color: white;
+}
+#grey{
+    background-color: yellow;
+}
+
