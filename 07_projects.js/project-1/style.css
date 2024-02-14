@@ -3,6 +3,7 @@
     box-sizing:border-box;
     margin: 0px;
 }
+
 body {
     
     margin: 0;
@@ -13,25 +14,17 @@ body {
 }
 .container{
 
-    display : flex;
-
-    justify-content: center;
-    align-items: center;
+    margin: 100px auto 100px;
+  width: 80%;
+  text-align: center;
 
 }
-.game{
-    height: 60vmin;
-    width: 60vmin;
-    display : flex;
-    flex-wrap :wrap;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .button{
     width:100px;
     height:100px;
-    display:inline-block;
+    display: inline-block;
     border:solid black 2px;
 }
 
@@ -39,13 +32,14 @@ body {
 #grey{
     background-color: grey;
 }
-#blue{
-    background-color: blue;
-}
+
 #white{
     background-color: white;
 }
-#grey{
+#blue{
+    background-color: blue;
+}
+#yellow{
     background-color: yellow;
 }
 
