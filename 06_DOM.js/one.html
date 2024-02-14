@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black"> // html collection // console.dir
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+    </div>
+</body>
+</html>
+//document.getElementById("tittle").id question?if yes Tittle otherwise it will return undefined
+//document.getElementById("tittle").class
+//document.getElementById("tittle").classname
+//innertext returns the text that is visival on webpage
+// textcontent returns the text that is visible and nonvisible text on web page
+//innerHTML returns all the html
+// Noodlist is not a pure array
+// in noodlist we apply the style in such way templist[0].style.color='green'
+//foreach on noodlist
+// templist.foreach((l)=>{
+    l.style.color="green"
+})
+//is foreach is applicable on html collection
+//no
+//to apply this we have to convert it 
+// by using Array.from(templist)
