@@ -52,7 +52,7 @@ if (loggedInFromGoogle || loggedInFromEmail) {
 }
 
 //Questions 1 => value of this on browser is window.
-//+=+================EXECUTION CONTEXT =================//
+//+=+================EXECUTION CONTEXT =================//single threaded
 //1.GLOBAL EXECUTION CONTEXT
 //2. FUNTION EXECUTION CONTEXT
 //3. EVAL EXECUTION CONTEXT
