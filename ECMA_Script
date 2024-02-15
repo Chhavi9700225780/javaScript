@@ -1,0 +1,28 @@
+//ECMA => European Computer Manufractures Association
+//searching string
+const planet ="Earth";
+console.log(planet.startsWithWith("th"));
+console.log(planet.endsWith("th"));
+console.log(planet.includes("th"));
+console.log(planet.search("th"));
+//SYMBOL
+//they are primirly used as unique ID's
+const id = Symbol();
+const course ={
+    title : "JSON",
+    id :"js",
+};
+course[id] = 42356;
+console.log(course[id]);
+//Map
+let course = new Map();
+course.set("react" , {description : "ui"});
+console.log(course);
+console.log(course.react);//undefined we can not access it's key by using . 
+console.log(course.get("react"));
+ // it's key can be of any type
+ let course = new Map([
+    []
+ ]);
+
+
