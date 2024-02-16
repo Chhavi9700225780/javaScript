@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequest</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called. request has been send
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.data has been send
+</body>
+<script> //ajex request
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest(); // it is method through which we can send and recive the http request
+    //we have to make it object
+    xhr.open('GET', requestUrl) //open is available when we have made the XMLHTTP request
+ // here request has not be gone 
+    //we have to call the open. it will no t call by itself
+    //onreadystatechange is used to track the request
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)// when we recive respnse from url then it mostly comes in the foam of string
+            //we have to convert it into Json object by using parses
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send(); // calling the open
+</script>
+</html>
