@@ -12,5 +12,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 // promise.all
 // yes this is also available, kuch reading aap b kro.
 //here data comes first before all the code //Why??
+//microtask Queue
 //Questions when we send request to browser then a error comes in response is it come in response or in error
 //ans response
