@@ -5,14 +5,14 @@ const User = {
 
 
     get email(){
-        return this._email.toUpperCase()
+        return this._email.toUpperCase() //memory
     },
 
     set email(value){
         this._email = value
-        
+
     }
 }
 
-const tea = Object.create(User)
-console.log(tea.email);
+const tea = Object.create(User) //factory function
+console.log(tea.email);//accessable // email()
