@@ -8,7 +8,7 @@ class User {
         return this._email.toUpperCase()
     }
     set email(value){
-        this._email = value //don't return here
+        this._email = value //don't return heree
     }
 
     get password(){
