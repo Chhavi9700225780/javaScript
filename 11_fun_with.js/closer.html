@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+    <!--closer gives you access to an outer function's scope from an inner function -->
+</body>
+
+    <script>
+    // function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+   // ===========================LEXICAL SCOPING=======================================//
+
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUTER", secret); //UNDEFINED
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner", username); // ACCESSABLE
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo", username); //ACCESSABLE
+    //         console.log(secret);//UNDEFINED
+    //     }
+    //     inner()
+    //     innerTwo()
+
+    // }
+    // outer()
+    // console.log("TOO OUTER", username); //UNDEFINED
+           
+    //=========================================COLOUSER=========================================//
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName; // ALL MEMORY EXECUTION PASSED RETURNS ALL LEXICAL SCOPE
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+    </script>
+    <!--================================PRACTICAL EXAMPLE====================================-->
+    <script>
+        // document.getElementById("orange").onclick = function(){
+        //     document.body.style.backgroundColor = `orange`
+        // }
+        // document.getElementById("green").onclick = function(){
+        //     document.body.style.backgroundColor = `green`
+        // }
+// FOR 500 BUTTONS =====>
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){
+                document.body.style.backgroundColor = `${color}` // without it color will we executed without clicking the button
+                //so we have to return a function not return direct the work
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+
+    </script>
+</html>
