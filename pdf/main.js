@@ -1,4 +1,4 @@
-const url = '../docs/pdf.pdf';
+const url = 'pdf.pdf';
 
 let pdfDoc = null,
   pageNum = 1,
@@ -67,8 +67,9 @@ const showNextPage = () => {
 };
 
 // Get Document
+
 pdfjsLib
-  .getDocument(url)
+.getDocument(url)
   .promise.then(pdfDoc_ => {
     pdfDoc = pdfDoc_;
 
