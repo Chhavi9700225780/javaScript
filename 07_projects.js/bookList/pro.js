@@ -129,6 +129,6 @@ class Book {
     // Remove book from store
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   
-    // Show success message
+    // Show success message and 
     UI.showAlert('Book Removed', 'success');
   });
