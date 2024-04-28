@@ -30,7 +30,10 @@ async function getCountryDetails(countryName){
     try {
         let url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
         let resp = await fetch(url).then((data)=> data.json())
+        console.log(resp);
         let result = await resp[0];
+
+        console.log(result);
 
         infoDiv.classList.remove('show')
         contentEl.classList.add('active')

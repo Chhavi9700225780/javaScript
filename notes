@@ -1,0 +1,258 @@
+/*isNaN()
+infinite is a Number type;
+let x = Number.MIN_SAFE_INTEGER;
+let y = Number.MAX_SAFE_INTEGER;
+The Number.isInteger() method returns true if the argument is an integer.
+A safe integer is an integer that can be exactly represented as a double precision number.
+
+The Number.isSafeInteger() method returns true if the argument is a safe integer.
+Safe integers are all integers from -(253 - 1) to +(253 - 1).
+This is safe: 9007199254740991. This is not safe: 9007199254740992.
+JavaScript will try to convert strings to numbers in all numeric operations:
+type of NaN is number
+
+
+Number()	Returns a number converted from its argument.
+parseFloat()	Parses its argument and returns a floating point number
+parseInt()	Parses its argument and returns a whole number
+
+
+Number("10,33");
+Number("10 33");
+Number("John");  NaN
+
+parseInt("-10");
+parseInt("-10.33");
+parseInt("10");
+parseInt("10.33");
+parseInt("10 20 30");
+parseInt("10 years");
+parseInt("years 10");//no
+
+
+Number.isInteger()	Returns true if the argument is an integer
+Number.isSafeInteger()	Returns true if the argument is a safe integer
+Number.parseFloat()	Converts a string to a number
+Number.parseInt()	Converts a string to a whole number
+
+
+Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+
+let x = 100 / "Apple";
+However, if the string is numeric, the result will be a number:
+
+Example
+let x = 100 / "10";
+
+
+Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+
+Example
+let x = NaN;
+let y = 5;
+let z = x + y;
+
+
+
+Or the result might be a concatenation like NaN5:
+
+Example
+let x = NaN;
+let y = "5";
+let z = x + y;
+
+
+
+
+
+EPSILON	The difference between 1 and the smallest number > 1.
+MAX_VALUE	The largest number possible in JavaScript
+MIN_VALUE	The smallest number possible in JavaScript
+MAX_SAFE_INTEGER	The maximum safe integer (253 - 1)
+MIN_SAFE_INTEGER	The minimum safe integer -(253 - 1)
+POSITIVE_INFINITY	Infinity (returned on overflow)
+NEGATIVE_INFINITY	Negative infinity (returned on overflow)
+NaN	A "Not-a-Number" value
+
+
+
+toString()	Returns a number as a string
+toExponential()	Returns a number written in exponential notation
+toFixed()	Returns a number written with a number of decimals
+toPrecision()	Returns a number written with a specified length
+valueOf()	Returns a number as a number
+
+
+// Create an array with one element:
+const points = [40];
+// Create an array with 40 undefined elements:
+const points = new Array(40);  
+
+
+Using delete() leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+
+
+Introduced the Array flat() method.
+
+The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+
+Example
+const myArr = [[1,2],[3,4],[5,6]];
+const newArr = myArr.flat();
+
+
+Copy to index 2, all elements from index 0:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+he copyWithin() method overwrites the existing values.
+
+The copyWithin() method does not add items to the array.
+
+The copyWithin() method does not change the length of the array.
+
+
+Basic Array Methods
+Array length
+Array toString()
+Array at()
+Array join()
+Array pop()
+Array push()
+See Also:
+Search Methods
+Sort Methods
+Iteration Methods	Array shift()
+Array unshift()
+Array delete()
+Array concat()
+Array copyWithin()
+Array flat()
+Array splice()
+Array toSpliced()
+Array slice()
+
+avaScript Array toSpliced()
+ES2023 added the Array toSpliced() method as a safe way to splice an array without altering the original array.
+
+The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array.
+
+Example
+const months = ["Jan", "Feb", "Mar", "Apr"];
+const spliced = months.toSpliced(0, 1);
+
+
+The find() method returns the value of the first array element that passes a test function.
+
+This example finds (returns the value of) the first element that is larger than 18:
+
+Example
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+The findIndex() method returns the index of the first array element that passes a test function.
+
+This example finds the index of the first element that is larger than 18:
+
+Example
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+ES2023 added the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+Example
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let high = temp.findLast(x => x > 40);
+
+The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+Example
+const temp = [27, 28, 30, 40, 42, 35, 30];
+let pos = temp.findLastIndex(x => x > 40);
+
+Array Find and Search Methods
+Array indexOf()
+Array lastIndexOf()
+Array includes()
+See Also:
+Basic Methods
+Sort Methods
+Iteration Methods	Array find()
+Array findIndex()
+Array findLast()
+Array findLastIndex()
+
+
+Array iteration methods operate on every array item:
+
+Array forEach
+Array map()
+Array flatMap()
+Array filter()
+Array reduce()
+Array reduceRight()
+See Also:
+Basic Array Methods
+Array Search Methods
+Array Sort Methods	Array every()
+Array some()
+Array from()
+Array keys()
+Array entries()
+Array with()
+Array Spread (...)
+
+
+
+Basic String Methods
+Javascript strings are primitive and immutable: All string methods produces a new string without altering the original string.
+
+String length
+String charAt()
+String charCodeAt()
+String at()
+String [ ]
+String slice()
+String substring()
+String substr()
+See Also:
+String Search Methods
+String Templates
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String repeat()
+String replace()
+String replaceAll()
+String split()
+
+
+tring Search Methods
+String indexOf()
+String lastIndexOf()
+String search()
+See Also:
+Basic String Methods
+String Templates
+String match()
+String matchAll()
+String includes()
+String startsWith()
+String endsWith()
+
+*/
